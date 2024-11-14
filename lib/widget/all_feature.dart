@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AllFeatured extends StatelessWidget {
+  final String? text;
   const AllFeatured({
     super.key,
+    this.text,
   });
 
   @override
@@ -12,7 +14,7 @@ class AllFeatured extends StatelessWidget {
     return Row(
       children: [
         Text(
-          'All Featured',
+          text ?? 'All Featured',
           style: Fontstyle.t18w600mon,
         ),
         const Spacer(),

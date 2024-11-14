@@ -5,6 +5,18 @@ class SearchView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Padding(
+      padding: EdgeInsets.all(28.0),
+      child: Column(
+        children: [
+          TextField(
+            decoration: InputDecoration(
+              hintText: 'search for ',
+              suffixIcon: Icon(Icons.search),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }

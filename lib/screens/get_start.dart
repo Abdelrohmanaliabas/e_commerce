@@ -15,7 +15,7 @@ class GetStart extends StatelessWidget {
           children: [
             Image.asset(
               'assets/images/GetStarted.png',
-              fit: BoxFit.cover,
+              fit: BoxFit.fill,
             ),
             Padding(
               padding: const EdgeInsets.all(56.0),

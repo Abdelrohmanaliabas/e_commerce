@@ -3,7 +3,14 @@ import 'package:e_commerce/widget/star_rating.dart';
 import 'package:flutter/material.dart';
 
 class ProdactCard extends StatelessWidget {
-  const ProdactCard({super.key});
+  final String? name;
+  final String? price;
+  final String? image;
+  final String? offer;
+  final double? rate;
+
+  const ProdactCard(
+      {super.key, this.name, this.price, this.image, this.offer, this.rate});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +24,7 @@ class ProdactCard extends StatelessWidget {
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(15), topRight: Radius.circular(15)),
             child: Image.asset(
-              'assets/images/api/list2.png',
+              image ?? 'assets/images/api/list2.png',
               width: double.infinity,
               fit: BoxFit.fill,
             ),
@@ -28,7 +35,7 @@ class ProdactCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Women Printed Kurta',
+                  name ?? 'Women Printed Kurta',
                   style: Fontstyle.t12w500mon,
                   textAlign: TextAlign.start,
                 ),
@@ -45,7 +52,7 @@ class ProdactCard extends StatelessWidget {
                   height: 6,
                 ),
                 Text(
-                  '₹1500',
+                  price ?? '₹1500',
                   style: Fontstyle.t12w500mon,
                 ),
                 const SizedBox(
@@ -74,7 +81,7 @@ class ProdactCard extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    const StarRating(rating: 3.7),
+                    StarRating(rating: rate ?? 3.7),
                     const SizedBox(
                       width: 10,
                     ),
